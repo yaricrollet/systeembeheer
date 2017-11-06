@@ -13,13 +13,12 @@ Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 # Host alias specification
 
 # User alias specification
-User_Alias USERS = check
 
 # Cmnd alias specification
-Cmnd_Alias USER_CMDS = /usr/lib/nagios/plugins/check_apt, /usr/sbin/arp
 
-# User privilege specification
-root	ALL=(ALL:ALL) ALL
+# User privilege specificationroot	ALL=(ALL:ALL) ALL
+check   ALL=(ALL:ALL) NOPASSWD: /usr/lib/nagios/plugins/check_apt
+check   ALL=(ALL:ALL) NOPASSWD: /usr/sbin/arp
 
 # Allow members of group sudo to execute any command
 %sudo	ALL=(ALL:ALL) ALL
@@ -27,5 +26,3 @@ root	ALL=(ALL:ALL) ALL
 # See sudoers(5) for more information on "#include" directives:
 
 #includedir /etc/sudoers.d
-
-USERS ALL = NOPASSWD: USER_CMDS
