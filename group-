@@ -53,3 +53,4 @@ messagebus:x:113:
 _cvsadmin:x:114:
 incron:x:115:
 check:x:1000:
+LOGIN:x:1001:

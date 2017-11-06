@@ -54,3 +54,4 @@ _cvsadmin:x:114:
 incron:x:115:
 check:x:1000:
 LOGIN:x:1001:
+ntp:x:116:
